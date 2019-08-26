@@ -18,5 +18,6 @@ RUN ros build service.ros && \
 	ros build quickstart.ros
 
 # SETUP INITIAL NODES
-RUN ./quickstart -g test -i test,data,contract,output,mirror -d "/root/layers/" -a 127.0.0.1 -p 9000 -ch 127.0.0.1 -cp 5984 -cu "" -ck "" -dt "" && \
-	cp -rf /root/layers/test/*.service /etc/systemd/system
+RUN ./quickstart -g test -i test,data,contract,output,mirror -d "/root/layers/" -a 127.0.0.1 -p 9000 -ch 127.0.0.1 -cp 5984 -cu "" -ck "" -dt ""
+RUN ls /root/layers/test/
+RUN cp -rf /root/layers/test/scripts/*.service /etc/systemd/system
