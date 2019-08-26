@@ -1,0 +1,3 @@
+[submodule "mercatus"]
+	path = mercatus
+	url = https://github.com/jnc-nj/mercatus.git

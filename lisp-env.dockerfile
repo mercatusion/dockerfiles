@@ -2,9 +2,11 @@
 FROM ubuntu:16.04
 
 # UPDATE REPOSITORIES
-RUN apt-get install software-properties-common
-RUN add-apt-repository ppa:couchdb/stable
+RUN sed -i 's/archive.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
 RUN apt-get clean
+RUN apt-get update
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository ppa:couchdb/stable
 RUN apt-get update
 
 # INSTALL ROSWELL DEPENDENCIES
@@ -18,15 +20,12 @@ RUN apt-get -y install git \
 	libblas-dev \
 	liblapack-dev \
 	systemd \
-	couchdb
+	couchdb \
+	curl
 
 # SET COUCHDB OWNERSHIP
 RUN chown -R couchdb:couchdb /usr/bin/couchdb /etc/couchdb /usr/share/couchdb
 RUN chmod -R 0770 /usr/bin/couchdb /etc/couchdb /usr/share/couchdb
-RUN systemctl restart couchdb
-
-# CHECK COUCHDB IS RUNNING
-RUN curl localhost:5984
 
 # SET LOCALE
 RUN locale-gen zh_CN.UTF-8
