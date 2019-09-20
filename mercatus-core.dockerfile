@@ -9,6 +9,8 @@ RUN git clone https://github.com/jnc-nj/py4cl.git /root/.roswell/local-projects/
 RUN git clone https://github.com/jnc-nj/clack.git
 /root/.roswell/local-projects/clack
 RUN git clone https://github.com/vindarel/replic.git /root/.roswell/local-projects/replic
+RUN git clone https://github.com/fukamachi/lack.git
+/root/.roswell/local-projects/lack
 RUN git clone https://github.com/mercatusion/mercatus-core.git /root/.roswell/local-projects/mercatus-core
 
 # COMPILE
