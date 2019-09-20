@@ -19,6 +19,7 @@ RUN apt-get -y install git \
 	usbutils \
 	libblas-dev \
 	liblapack-dev \
+	libev-dev \
 	systemd \
 	couchdb \
 	curl
