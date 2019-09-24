@@ -8,14 +8,14 @@ ARG GITHUB_PASS=$GITHUB_PASS
 RUN echo "machine github.com\n\tlogin $GITHUB_USER\n\tpassword $GITHUB_PASS" >> ~/.netrc
 
 # CLONE REPOS
-RUN git clone --depth 1 https://github.com/jnc-nj/mercatus.git /root/.roswell/local-projects/mercatus
-RUN git clone --depth 1 https://github.com/jnc-nj/jack-tools.git /root/.roswell/local-projects/jack-tools
+RUN git clone --depth 1 https://github.com/vindarel/replic.git /root/.roswell/local-projects/replic
+RUN git clone --depth 1 https://github.com/fukamachi/lack.git /root/.roswell/local-projects/lack
 RUN git clone --depth 1 https://github.com/jnc-nj/asn1.git /root/.roswell/local-projects/asn1
 RUN git clone --depth 1 https://github.com/jnc-nj/pem.git /root/.roswell/local-projects/pem
 RUN git clone --depth 1 https://github.com/jnc-nj/py4cl.git /root/.roswell/local-projects/py4cl
 RUN git clone --depth 1 https://github.com/jnc-nj/clack.git /root/.roswell/local-projects/clack
-RUN git clone --depth 1 https://github.com/vindarel/replic.git /root/.roswell/local-projects/replic
-RUN git clone --depth 1 https://github.com/fukamachi/lack.git /root/.roswell/local-projects/lack
+RUN git clone --depth 1 https://github.com/jnc-nj/jack-tools.git /root/.roswell/local-projects/jack-tools
+RUN git clone --depth 1 https://github.com/jnc-nj/mercatus.git /root/.roswell/local-projects/mercatus
 
 # COMPILE
 WORKDIR /root/.roswell/local-projects/mercatus/roswell
