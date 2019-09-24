@@ -8,6 +8,7 @@ RUN apt-get update
 RUN apt-get -y install software-properties-common
 RUN add-apt-repository ppa:couchdb/stable
 RUN apt-get update
+RUN apt-get -y install couchdb
 
 # INSTALL ROSWELL DEPENDENCIES
 RUN apt-get -y install git \
@@ -21,7 +22,6 @@ RUN apt-get -y install git \
 	liblapack-dev \
 	libev-dev \
 	systemd \
-	couchdb \
 	curl
 
 # SET COUCHDB OWNERSHIP
@@ -44,8 +44,6 @@ RUN ./configure
 RUN make
 RUN make install
 RUN ros setup
-RUN ros install sbcl/1.5.1
-RUN ros use sbcl/1.5.1
 
 # CHECK ROSWELL IS RUNNING
 RUN ros version
