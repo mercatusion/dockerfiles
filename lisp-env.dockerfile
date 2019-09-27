@@ -44,6 +44,8 @@ RUN ./configure
 RUN make
 RUN make install
 RUN ros setup
+RUN ros install sbcl/1.5.6
+RUN ros use sbcl/1.5.6
 
 # CHECK ROSWELL IS RUNNING
 RUN ros version
