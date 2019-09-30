@@ -26,5 +26,9 @@ RUN ros build service.ros && \
 	ros build repl.ros && \
 	ros build quickstart.ros
 
+# REMOVE CACHE
+RUN rm -rf /root/.roswell/local-rpojects/mercatus/src
+RUN rm -rf /root/.roswell/local-projects/mercatus/docs
+
 # SETUP INITIAL NODES
 RUN ./quickstart -g test -i test -d "/root/layers/" -a 127.0.0.1 -p 9000 -ch 127.0.0.1 -cp 5984 -cu "" -ck "" -dt ""
