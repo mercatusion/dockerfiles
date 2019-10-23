@@ -17,6 +17,7 @@ RUN git clone --depth 1 https://github.com/jnc-nj/py4cl.git /root/.roswell/local
 RUN git clone --depth 1 https://github.com/jnc-nj/clack.git /root/.roswell/local-projects/clack
 RUN git clone --depth 1 https://github.com/jnc-nj/dexador.git /root/.roswell/local-projects/dexador
 RUN git clone --depth 1 https://github.com/jnc-nj/jack-tools.git /root/.roswell/local-projects/jack-tools
+RUN git clone --depth 1 https://github.com/jnc-nj/swagger.git /root/.roswell/local-projects/swagger
 RUN git clone --depth 1 https://github.com/jnc-nj/mercatus.git /root/.roswell/local-projects/mercatus
 
 # COMPILE
